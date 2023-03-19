@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AboutComponent } from './about/about.component';
+import { PricingComponent } from './pricing/pricing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    AboutComponent
+    AboutComponent,
+    PricingComponent
   ],
   imports: [
     BrowserModule,

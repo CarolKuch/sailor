@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { PricingComponent } from './pricing/pricing.component';
 
 const routes: Routes = [
-  //   {
-  //     path: 'home',
-  //     component: HomeComponent
-  // },
-  // {
+  {
+    path: 'pricing',
+    component: PricingComponent
+  },
   {
     path: 'about',
     component: AboutComponent
