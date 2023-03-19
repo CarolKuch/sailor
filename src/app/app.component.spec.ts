@@ -1,6 +1,8 @@
+import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -9,7 +11,8 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        NavigationComponent
       ],
     }).compileComponents();
   });
@@ -33,5 +36,5 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('title')?.textContent).toContain('JustAnApp');
   });
 
-  
+
 });
