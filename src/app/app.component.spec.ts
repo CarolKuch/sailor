@@ -32,4 +32,6 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('title')?.textContent).toContain('JustAnApp');
   });
+
+  
 });
