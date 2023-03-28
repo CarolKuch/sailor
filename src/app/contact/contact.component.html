@@ -1,5 +1,18 @@
-<h2>Skontaktuj się ze mną</h2>
+<div class="text-center p-4">
+  <h2 class="p-4">Skontaktuj się ze mną</h2>
 
-<i class="fa-regular fa-envelope"></i>
-
-513966350 kuba3946@gmail.com
+  <div class="d-flex flex-column flex-md-row justify-content-md-around">
+    <div>
+      <p><fa-icon [icon]="faEnvelope" class="fa-lg"></fa-icon></p>
+      kuba3946@gmail.com
+    </div>
+    <div>
+      <p><fa-icon [icon]="faPhone" class="fa-lg"></fa-icon></p>
+      <a href="tel:{{513966350}}">513966350</a>
+    </div>
+    <div>
+      <p><fa-icon [icon]="faMapMarker" class="fa-lg"></fa-icon></p>
+      Adres: <p>Skwierzyńska 39/46; 53-521 Wrocław</p>
+    </div>
+  </div>
+</div>
