@@ -1,18 +1,22 @@
-<div class="text-center p-4">
+<div class="content bg-light">
   <h2 class="p-4">Skontaktuj się ze mną</h2>
 
-  <div class="d-flex flex-column flex-md-row justify-content-md-around">
-    <div>
-      <p><fa-icon [icon]="faEnvelope" class="fa-lg"></fa-icon></p>
-      kuba3946@gmail.com
+  <div class="d-flex flex-column flex-md-row justify-content-md-center">
+    <div class="content-item">
+      <a href="mailto:kuba3946@gmail.com" class="link-secondary">
+      <p><fa-icon [icon]="faEnvelope" class="fa-lg text-primary"></fa-icon></p>
+      kuba3946@gmail.com</a>
     </div>
-    <div>
-      <p><fa-icon [icon]="faPhone" class="fa-lg"></fa-icon></p>
-      <a href="tel:{{513966350}}">513966350</a>
+    <div class="content-item" >
+      <a href="tel:{{513966350}}" class="link-secondary">
+      <p><fa-icon [icon]="faPhone" class="fa-lg text-primary"></fa-icon></p>
+      513966350</a>
     </div>
-    <div>
-      <p><fa-icon [icon]="faMapMarker" class="fa-lg"></fa-icon></p>
-      Adres: <p>Skwierzyńska 39/46; 53-521 Wrocław</p>
+    <div class="content-item">
+      <a href="https://goo.gl/maps/iXCsHkDg5M1RiCxx5" target="_blank" class="link-secondary">
+        <p><fa-icon [icon]="faMapMarker" class="fa-lg text-primary"></fa-icon></p>
+        Adres: <p>Skwierzyńska 39/46; 53-521 Wrocław</p>
+      </a>
     </div>
   </div>
 </div>

@@ -1,7 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
-
-/* Importing Bootstrap SCSS file. */
 @import "./node_modules/bootstrap/scss/bootstrap";
-
-/* Importing Datepicker SCSS file. */
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+.content{
+  text-align: center;
+  justify-content: center;
+  margin: 3rem 1rem;
+}
+
+.content-item{
+ padding: 1rem 2rem;
+ margin: 1rem;
+}
+
+a:link, a:visited, a:hover, a:active{
+  text-decoration: none;
+}
