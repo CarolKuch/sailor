@@ -11,6 +11,8 @@ import { ContactComponent } from './contact/contact.component';
 import { CruiseComponent } from './cruise/cruise.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ContactFormComponent } from './contact/contact-form/contact-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,16 +22,19 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PricingComponent,
     ContactComponent,
     CruiseComponent,
-    FooterComponent
+    FooterComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   exports: [
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

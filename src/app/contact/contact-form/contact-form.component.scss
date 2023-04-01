@@ -1,0 +1,21 @@
+.contact-form-container {
+  background-color: white;
+  width: 60%;
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: left;
+}
+
+.form-group{
+  margin: 1rem;
+}
+
+.form-control-email{
+  width: 60%;
+}
+
+@media (max-width: 979px) {
+  .contact-form-container{
+    width: 90%;
+  }
+}
