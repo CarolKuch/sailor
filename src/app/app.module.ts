@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     ContactComponent,
     CruiseComponent,
     FooterComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
