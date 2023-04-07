@@ -1,19 +1,30 @@
-import { Component } from '@angular/core';
-import { messageForm } from 'src/app/models/messageForm';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss']
 })
+
 export class ContactFormComponent {
-  messageContent = '';
-  senderEmail = '';
 
-  model = new messageForm(this.senderEmail, this.messageContent);
+  form: FormGroup = this.fb.group({
+    email: ['', [
+      Validators.required,
+      Validators.pattern("[^ @]*@[^ @]*")]],
+    message: ['', [
+      Validators.required,
+      Validators.minLength(8)]],
+  });
 
-  submitted = false;
+  constructor(private fb: FormBuilder) { }
 
-  onSubmit() { this.submitted = true; console.log(this.model.senderEmail + this.model.messageContent) }
-
+  submit() {
+    console.log(`Twoja wiadomość się tu pokazuje: ${this.form.value.message}`);
+    if (this.form.valid) {
+      console.log("Wysłano");
+    }
+  }
 }

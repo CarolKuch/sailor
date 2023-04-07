@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
-import { messageForm } from 'src/app/models/messageForm';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactFormComponent } from './contact-form.component';
 
 describe('ContactFormComponent', () => {
@@ -9,7 +8,7 @@ describe('ContactFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FormsModule],
+      imports: [FormsModule, ReactiveFormsModule],
       declarations: [ContactFormComponent]
     })
       .compileComponents();
@@ -22,4 +21,20 @@ describe('ContactFormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
+  it('form invalid when empty', () => {
+    expect(component.form.valid).toBeFalsy();
+  });
+
+  it('email field validity', () => {
+    let email = component.form.controls['email'];
+    expect(email.valid).toBeFalsy();
+  });
+
+  it('message field validity', () => {
+    let message = component.form.controls['message'];
+    expect(message.valid).toBeFalsy();
+  });
+
 });

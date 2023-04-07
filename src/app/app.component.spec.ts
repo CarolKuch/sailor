@@ -4,17 +4,22 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContactComponent } from './contact/contact.component';
+import { ContactFormComponent } from './contact/contact-form/contact-form.component';
+import { FormsModule } from '@angular/forms';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
       ],
       declarations: [
         AppComponent,
         NavigationComponent,
-        FooterComponent
+        FooterComponent,
+        ContactComponent,
+        ContactFormComponent
       ],
     }).compileComponents();
   });

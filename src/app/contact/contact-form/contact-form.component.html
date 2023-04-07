@@ -1,66 +1,22 @@
-<form class="contact-form-container" (ngSubmit)="onSubmit()" [hidden]="submitted" #contactForm="ngForm">
+<form (ngSubmit)="submit()"
+      [formGroup]="form"
+      class="contact-form-container">
   <div class="d-flex flex-row">
     <div class="col-md-7">
       <h3>Formularz kontaktowy</h3>
-          <div class="form-group">
-            <label for="senderEmail">
-              Twój adres email:
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="form-control form-control-email"
-              required minlength="4"
-              [(ngModel)]="model.senderEmail"
-              #email="ngModel"
-              email="true"
-              placeholder="adres e-mail" >
-            <div
-              *ngIf="(email.invalid && email.touched) || email.dirty" class="alert">
-                <div
-                  *ngIf="email.errors?.['email']" class="text-danger">
-                    Email jest nieprawidłowy.
-                </div>
-                <div
-                  *ngIf="email.errors?.['required']" class="text-danger">
-                    Email jest wymagany.
-                </div>
-                <div
-                  *ngIf="email.errors?.['minlength']" class="text-danger">
-                    Email musi składać się co najmniej z 4 znaków.
-                </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="messageContent">Wiadomość</label>
-            <textarea
-              type="text"
-              id="message"
-              name="message"
-              class="form-control form-control-message"
-              required minlength="4"
-              [(ngModel)]="model.messageContent"
-              #message="ngModel"
-              placeholder="wiadomość">
-            </textarea>
-            <div
-              *ngIf="message.invalid && (message.dirty || message.touched)" class="alert">
-                <div
-                  *ngIf="message.errors?.['required']" class="text-danger">
-                    Treść wiadomości jest wymagana.
-                </div>
-                <div
-                  *ngIf="message.errors?.['minlength']" class="text-danger">
-                    Wiadomość musi składać się co najmniej z 4 znaków.
-                </div>
-            </div>
-          </div>
-          <button
-            class="btn btn-primary"
-            type="submit">
-              Wyślij
-          </button>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email"
+              formControlName="email"
+              class="form-control form-control-email">
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea type="text"
+              formControlName="message"
+              class="form-control form-control-message">
+        </textarea>
+      </div>
     </div>
     <div class="col-md-5 d-flex align-items-stretch">
       <div
@@ -69,8 +25,7 @@
       </div>
     </div>
   </div>
+  <button
+    type="submit"
+    class="btn btn-primary">Send</button>
 </form>
-<div class="contact-form-container" [hidden]="!submitted">
-  <h3>Formularz kontaktowy</h3>
-  Twoja wiadomość została wysłana, dzięki. Odpowiem najszybciej, jak będzie to możliwe. Ahoj!
-</div>
