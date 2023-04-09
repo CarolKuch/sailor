@@ -21,10 +21,10 @@ export class ContactFormComponent {
 
   constructor(private fb: FormBuilder) { }
 
+  //TEMPORARY - object is to be sent to API
   submit() {
-    console.log(`Twoja wiadomość się tu pokazuje: ${this.form.value.message}`);
     if (this.form.valid) {
-      console.log("Wysłano");
+      return this.form.value;
     }
   }
 }
