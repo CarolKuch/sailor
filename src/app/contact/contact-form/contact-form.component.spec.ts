@@ -51,16 +51,23 @@ describe('ContactFormComponent', () => {
     expect(message.valid).toBeFalsy();
   });
 
+  it('title field validity', () => {
+    let title = component.form.controls['title'];
+    expect(title.valid).toBeFalsy();
+  });
+
   //TEMPORARY - to be changed, when submit function will be connected to API
   it('submitting a form emits a correct object', () => {
     expect(component.form.valid).toBeFalsy();
     component.form.controls['email'].setValue("justanemail@gmail.com");
+    component.form.controls['title'].setValue("abcd");
     component.form.controls['message'].setValue("abcd1234");
     expect(component.form.valid).toBeTruthy();
 
     var obj = component.submit();
 
     expect(obj.email).toBe("justanemail@gmail.com");
+    expect(obj.title).toBe("abcd");
     expect(obj.message).toBe("abcd1234");
   });
 

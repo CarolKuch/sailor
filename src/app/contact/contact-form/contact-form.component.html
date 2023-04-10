@@ -1,14 +1,21 @@
 <form (ngSubmit)="submit()"
       [formGroup]="form"
       class="contact-form-container">
-  <div class="d-flex flex-row">
-    <div class="col-md-7">
+  <div class="d-flex flex-md-row flex-column">
+    <div class="col-12 col-md-7">
       <h3>Formularz kontaktowy</h3>
       <div class="form-group">
         <label>Twój email</label>
         <input type="email"
               formControlName="email"
-              class="form-control form-control-email">
+              class="form-control form-control-email"
+              (keydown.space)="$event.preventDefault();">
+      </div>
+      <div class="form-group">
+        <label>Tytuł wiadomości</label>
+        <input type="text"
+              formControlName="title"
+              class="form-control form-control-title">
       </div>
       <div class="form-group">
         <label>Wiadomość</label>
@@ -18,7 +25,7 @@
         </textarea>
       </div>
     </div>
-    <div class="col-md-5 d-flex align-items-stretch">
+    <div class="col-12 col-md-5 d-flex align-items-stretch">
       <div
         alt="sailing"
         class="contact-form-image w-100">
@@ -27,5 +34,6 @@
   </div>
   <button
     type="submit"
-    class="btn btn-primary">Wyślij</button>
+    class="btn btn-primary"
+    [disabled]="!form.valid">Wyślij</button>
 </form>
