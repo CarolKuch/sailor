@@ -1,6 +1,7 @@
 # JustAnApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
+Written at the request of a sailor conducting training cruises.
 
 ## Development server
 
